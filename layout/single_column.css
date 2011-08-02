@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container,
+#header .inner,
+#footer .inner {
+	width: 700px;
+}
+
+#sidebar-one{
+	display: none;
+}
+
+#maincontent{
+	margin-left: 0;
+}
+
+#footer .column{
+	margin-left: 0;
+	margin-right: 0;
+	width:33%;
+}
