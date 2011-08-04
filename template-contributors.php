@@ -12,7 +12,7 @@ Template Name: Contributors Page
     
       <div class="inner contributors">
 				
-				<h1 class="page-title"><?php _e('Contributors','aperturious'); ?></h1>
+				<h1 class="page-title entry-title"><?php _e('Contributors','aperturious'); ?></h1>
 				
 				<?php contributors(); ?>
 				

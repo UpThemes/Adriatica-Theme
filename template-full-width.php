@@ -20,7 +20,7 @@ Template Name: Full Width Page
 				
 				<div class="post-alt blog" id="post-<?php the_ID(); ?>">
 				
-					<h1><?php the_title(); ?></h1> 
+					<h1 class="entry-title"><?php the_title(); ?></h1> 
 		
 					<div class="entry">
 						<?php the_content(__('<span class="continue">Continue Reading</span>','aperturious')); ?>

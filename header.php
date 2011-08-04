@@ -6,14 +6,29 @@ global $up_options;
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<title><?php wp_title('//','true','right'); ?> <?php bloginfo('name'); ?></title>
+<title>
+<?php
+/* Title Function */
+    if(function_exists('up_title')):
+        echo "<title>".up_title()."</title>";
+    else:
+        echo "<title>";
+        wp_title('');
+        if(!is_home())echo ' - '.get_bloginfo('name');
+        echo "</title>";
+    endif;
+    
+    /* SEO */
+    do_action('up_seo');
+?>
+</title>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/print.css" media="print" />
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/vnd.microsoft.icon"/>
 <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-ico"/>
 <link rel="start" href="<?php bloginfo('url'); ?>" title="Home" />
-<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php rss(); ?>" />
+<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php upfw_rss(); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/font/stylesheet.css" media="screen" />

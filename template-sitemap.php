@@ -14,7 +14,7 @@ Template Name: Sitemap Page
       
 			<div class="postwrapper">
 				
-				<h1 class="page-title"><?php _e('Sitemap','aperturious'); ?></h1>
+				<h1 class="page-title entry-title"><?php _e('Sitemap','aperturious'); ?></h1>
 				
 				<div class="grid_3 alpha">
 					<div class="buffer">

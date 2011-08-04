@@ -10,7 +10,7 @@ function ap_post(){
 
 			<?php echo p75GetVideo( $post->ID ); ?>
 			<?php the_ap_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
-			<h1 class="no-image entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo __('Permanent Link to','aperturious') . get_the_title(); ?>"><?php the_title(); ?></a></h1>
+			<h1 class="no-image"><a href="<?php the_permalink(); ?>" title="<?php echo __('Permanent Link to','aperturious') . get_the_title(); ?>"><?php the_title(); ?></a></h1>
 			<?php
 
 	else:
@@ -26,7 +26,7 @@ function ap_post(){
 
 		<?php endif; ?>
         
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo __('Permanent Link to','aperturious') . get_the_title(); ?>"><?php the_title(); ?></a></h1>
+		<h1><a href="<?php the_permalink(); ?>" title="<?php echo __('Permanent Link to','aperturious') . get_the_title(); ?>"><?php the_title(); ?></a></h1>
 		
 		<?php the_ap_meta();
 
