@@ -179,24 +179,6 @@ function navigation_below(){
 <?php
 }
 
-function alternate_post_thumbnail($postID,$height=32,$width=32) {
-  global $post;
-  $post->ID=$postID;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $first_img = $matches [1] [0];
-
-  if(empty($first_img)){ //Defines a default image
-    $first_img = "/images/default.jpg";
-  }
-  
-  $image = '<img src=' . get_bloginfo('template_url') . '/thumb.php?src=' . $first_img . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;zc=1" alt=""/>';
-  
-  echo $image;
-}
-
 
 // Create a modified output of wp_list_categories where the categories description
 // is added inside a span tag within the link like so:
