@@ -6,7 +6,6 @@ global $up_options;
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<title>
 <?php
 /* Title Function */
     if(function_exists('up_title')):
@@ -21,7 +20,6 @@ global $up_options;
     /* SEO */
     do_action('up_seo');
 ?>
-</title>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/print.css" media="print" />
