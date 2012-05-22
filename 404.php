@@ -1,27 +1,23 @@
-<?php get_header() ?>
+<?php get_header(); ?>
   
   <div id="main">
   
-    <div id="maincontent" class="equal">
+    <div id="maincontent">
     
       <div class="inner">
 
-	      <?php top_content_ads(); ?>
+        <h1 class="single-cat"><?php _e('Page Not Found','adriatica'); ?></h1>
         
-        <h1 class="single-cat"><?php _e('Page Not Found'); ?></h1>
+        <p><?php _e('The page you requested may have been moved or deleted.','adriatica'); ?></p>
         
-        <p><?php _e('The page you were looking for doesn\'t seem to exist. We\'ve been improving this site and the page might have been moved to another place.'); ?></p>
-        
-        <a class="backtohome" href="<?php bloginfo('url'); ?>"><?php _e('Back to Home'); ?></a>
+        <a class="backtohome" href="<?php bloginfo('url'); ?>"><?php _e('&larr; Back to Home','adriatica'); ?></a>
 
-	      <?php bottom_content_ads(); ?>
-
-      </div><!-- /#inner -->
+      </div><!-- /.inner -->
     
     </div><!-- /#maincontent -->
       
-	  <?php get_sidebar() ?>
+	  <?php get_sidebar(); ?>
 
   </div><!-- /#main -->
 
-<?php get_footer() ?>
+<?php get_footer(); ?>

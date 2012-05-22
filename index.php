@@ -6,25 +6,19 @@
     
       <div class="inner">
       
-		<?php top_content_ads(); ?>
-		
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		  
-		<?php ap_post(); ?>    
-		
-		<?php endwhile; ?>
-		
-		<?php else : ?>
-		
-		<?php no_posts(); ?>
-		
-		<?php endif; ?>
-		
-		<?php navigation_below(); ?>
-		
-		<?php bottom_content_ads(); ?>
-      
-      </div><!-- /#inner -->
+  		<?php if( have_posts() ): while( have_posts() ) : the_post(); ?>
+  		  
+  		<?php get_template_part( 'content', get_post_format() ); ?>    
+  		
+  		<?php endwhile; else: ?>
+  		
+  		<?php no_posts(); ?>
+  		
+  		<?php endif; ?>
+  		
+  		<?php navigation_below(); ?>
+
+      </div><!-- /.inner -->
       
     </div><!-- /#maincontent -->
       

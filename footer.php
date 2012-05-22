@@ -1,8 +1,6 @@
     <div class="clear"></div>
   </div><!-- /#container -->
   
-	<?php ads_above_footer(); ?>
-  
   <div id="footer">
     <div class="inner">
     	
@@ -27,6 +25,7 @@
       </div><!-- /#inner-->
   </div><!-- /#footer-->
 </div><!-- /#wrapper -->
+
 <?php wp_footer() ?>
 
 </body>

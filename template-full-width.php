@@ -23,7 +23,7 @@ Template Name: Full Width Page
 					<h1 class="entry-title"><?php the_title(); ?></h1> 
 		
 					<div class="entry">
-						<?php the_content(__('<span class="continue">Continue Reading</span>','aperturious')); ?>
+						<?php the_content(__('<span class="continue">Continue Reading</span>','adriatica')); ?>
 					</div>
 				
 				</div><!--/post-->

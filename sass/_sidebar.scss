@@ -1,0 +1,59 @@
+/* Sidebar Styles */
+
+#sidebar{
+  
+    list-style: none;
+    font-size: .9em;
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    ul{
+      margin: 0;
+      padding: 0;
+      
+      li{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  
+    .widget{
+      background-color: white;
+      border-radius: 4px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+      
+      h4.widgettitle{
+        text-shadow: none;
+      }
+      
+      .search-form fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+  
+    }
+  
+  .outer {
+    width: auto;
+    position: relative;
+    margin: 0;
+    padding: 0; 
+  }
+
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.1em; 
+  }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: white; 
+  }
+
+}

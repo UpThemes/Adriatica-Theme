@@ -28,7 +28,7 @@ Template Name: Archives Page
                 
                 <div class="grid_2 omega">
                 
-                    <h3 class="cufon"><?php _e('Monthly archives','aperturious'); ?></h3>
+                    <h3 class="cufon"><?php _e('Monthly archives','adriatica'); ?></h3>
         
                     <ul>
                         <?php wp_get_archives('type=monthly&show_post_count=1') ?>	
@@ -44,7 +44,7 @@ Template Name: Archives Page
                 
             <div id="tag-cloud" class="buffer">
 	            
-	            <h3><?php _e('Popular tags','aperturious'); ?></h3>					        
+	            <h3><?php _e('Popular tags','adriatica'); ?></h3>					        
 	            
 	            <ul class="list1">
 	                <?php wp_tag_cloud('smallest=10&largest=18'); ?>
@@ -58,7 +58,7 @@ Template Name: Archives Page
 			
 			<div class="last-thirty-posts" class="buffer">
 			
-				<h3 class="cufon"><?php _e('The last 30 posts','aperturious'); ?></h3>
+				<h3 class="cufon"><?php _e('The last 30 posts','adriatica'); ?></h3>
             
 	            <ul>
 	                <?php query_posts('showposts=30'); ?>

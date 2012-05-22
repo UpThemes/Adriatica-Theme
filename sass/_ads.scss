@@ -1,0 +1,23 @@
+.adblock {
+  margin-bottom: 20px;
+  text-align: center;
+
+  a {
+    img {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0; }
+    &:hover img {
+      background-color: #59A323;
+      padding: 0; }
+  }
+}
+
+
+#ads_above_footer {
+  background: #262626 url("images/footer-ad-bg.jpg") repeat-x top left;
+  padding: 20px 0;
+
+  .adblock {
+    margin-bottom: 0;
+  }
+}

@@ -5,12 +5,10 @@
 		<div id="maincontent">
 		
 			<div class="inner">
-			
-				<?php top_content_ads(); ?>
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<?php ap_post(); ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
 					
 					<?php comments_template(); ?>
 				
@@ -21,9 +19,7 @@
 					<?php no_posts(); ?>
 				
 				<?php endif; ?>
-				
-				<?php bottom_content_ads(); ?>
-			
+
 			</div><!-- /.inner -->
 		
 		</div><!-- /#maincontent -->

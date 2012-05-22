@@ -8,13 +8,13 @@
       
 				<?php if (have_posts()) : ?>
     
-        <h1><?php _e('Search Results for','aperturious'); ?> <em id="search-terms">'<?php echo wp_specialchars(stripslashes($_GET['s']), true); ?>'</em></h1>
+        <h1><?php _e('Search Results for','adriatica'); ?> <em id="search-terms">'<?php echo wp_specialchars(stripslashes($_GET['s']), true); ?>'</em></h1>
       
         <?php navigation_above(); ?>
       
         <?php while (have_posts()) : the_post(); ?>
         
-        <?php ap_post(); ?>
+        <?php get_template_part( 'content', get_post_format() ); ?>
     
         <?php endwhile; ?>
     

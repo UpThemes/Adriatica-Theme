@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0 0 1em 0; 
+}
+
+a {
+  text-decoration: none;
+  &:hover, &:active {
+    text-decoration: underline; 
+  }
+  &:hover img {
+    border-color: #ccc; 
+  }
+  img {
+    border: 0; 
+  } 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0 0 1em 0; 
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4, h5, h6 {
+  font-size: 1em;
+}
+
+h6{
+  margin-bottom: 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #444; 
+}
+
+caption {
+  border-radius: 4px;
+  background-color: #f2f2f2; 
+}
+
+blockquote {
+  border-left: 5px solid #f2f2f2;
+  padding-left: 30px;
+  margin: 1.5em 1em 1.5em 0;
+  font: italic 1em/1.4em Georgia, "Times New Roman", Times, serif;
+  p {
+    color: #111; 
+  } 
+}
+
+pre {
+  padding: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 580px; 
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0; 
+}
+
+dl {
+  margin-bottom: 3em; 
+}
+
+dt {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0 0 1em; 
+  margin: 0; 
+}
+
+code {
+  line-height: 1.2em;
+  font-size: 0.9em;
+  font-weight: normal; 
+}
+
+input {
+  &[type="text"], 
+  &[type="email"], 
+  &[type="phone"], 
+  &[type="password"], 
+  &[type="submit"]{
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px; 
+  } 
+}
+
+textarea {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px; 
+}
+
+input {
+  &[type="submit"], &.submit {
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border: 1px solid #0a0a0a;
+    padding: 3px;
+    font-size: .9em;
+    padding-left: 8px;
+    padding-right: 8px; 
+  }
+  &[type="submit"]:active, &.submit:active {
+    background: #000;
+    color: #333;
+    border: 1px inset #333; 
+  }
+  &[type="text"], 
+  &[type="email"], 
+  &[type="phone"], 
+  &[type="password"] {
+    border: 1px solid #a9a9a9;
+    padding: 6px; 
+  } 
+}
+
+input:focus {
+  outline: none; 
+}
+
+select, textarea {
+  border: 1px solid #a9a9a9;
+  padding: 6px; 
+}
+
+textarea {
+  height: 160px; 
+}
+
+ol,ul{
+  list-style: square;
+  margin-bottom: 1em;
+}
+
+ol li,
+ul li{
+  list-style: square;
+  margin-left: 1.2em;
+}
+
+.assistive-text{
+  display: none;
+}
+
+.content-wrapper img{
+  max-width: 100%;
+  height: auto;
+}

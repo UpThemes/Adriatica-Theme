@@ -1,0 +1,140 @@
+/* Comment Styles */
+
+.logged-in-as,
+.form-allowed-tags{
+  font-size: .8em;
+  line-height: 1.6em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #fef3cd;
+}
+
+.form-allowed-tags {
+  font-weight: bold;
+  font-size: 0.84em;
+  background: #eee;
+}
+
+h3#comments-title {
+  margin-left: 185px;
+}
+
+.commentlist {
+  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  clear: both;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    clear: both;
+  } 
+}
+
+#comments, 
+.commentlist, 
+#respond {
+  margin-bottom: 20px; 
+}
+
+.commentlist, 
+#respond {
+  margin-left: 185px; 
+}
+
+.commentlist {
+
+  #respond {
+    margin-left: 0;
+    padding: 20px;
+    border: 1px solid #94AFC7;
+    background-color: #EFF7FF;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    
+    textarea {
+      width: 100%;
+    } 
+  }
+
+  li {
+    padding: 20px;
+    margin-bottom: 10px;
+    -moz-border-radius: 4px;
+    border: 1px solid #94afc7;
+    background-color: #e3edf6;
+    position: relative; 
+  } 
+}
+
+.comment-author {
+  position: absolute;
+  left: -180px;
+  width: 180px;
+  padding-top: 10px;
+  top: 0;
+  background: url("images/comment_arrow.png") no-repeat right 40px; 
+}
+
+.comment-author img {
+  display: block;
+  padding: 2px;
+  border: 1px solid #ccc;
+}
+
+.commentlist {
+
+  .children {
+    margin: 10px 0 0 0;
+    padding: 0;
+
+    .even {
+      background: #EFF7FF;
+    }
+
+    .comment-author {
+      position: relative;
+      left: auto;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 10px;
+      top: auto;
+      background: none;
+
+      img {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 5px;
+        padding: 2px;
+        border: 1px solid #ccc; 
+      } 
+    } 
+  }
+
+  li a {
+    color: #346596;
+    font-style: italic; 
+  } 
+}
+
+#commentform {
+  
+  input[type="text"],
+  textarea{
+    display: block;
+    width: auto;
+    margin-top: .4em;
+    font-size: 1em;
+    color: #999;
+  }
+  
+  textarea{
+    width: 98%;
+  }
+
+}

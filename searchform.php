@@ -1,6 +1,6 @@
-			<form method="get" class="search-form" action="<?php bloginfo('url'); ?>/">
-			  <fieldset>
-					<input type="text" name="s" class="s" value="<?php the_search_query(); ?>"/>
-					<input type="submit" value="<?php _e('Search Site','aperturious'); ?>" name="submit-search" class="submit"/>
-				</fieldset>
-			</form>
+<form method="get" class="search-form" action="<?php bloginfo('url'); ?>/">
+  <fieldset>
+    <input type="text" name="s" class="s" placeholder="<?php _e("Search","adriatica"); ?>" value="<?php the_search_query(); ?>"/>
+		<button type="submit" name="submit-search" class="submit-image"><?php _e("Submit","adriatica"); ?></button>
+	</fieldset>
+</form>

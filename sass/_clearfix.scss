@@ -1,0 +1,42 @@
+/* Clear Styles */
+
+.clear {
+  height: 1%;
+  overflow: hidden;
+  clear: both;
+  visibility: hidden; 
+}
+
+.clearboth {
+  clear: both; 
+}
+
+.clearleft {
+  clear: left; 
+}
+
+.clearright {
+  clear: right; 
+}
+
+.clearfix {
+
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; 
+  }
+
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block; 
+}
+
+* html .clearfix {
+  height: 1%; 
+}

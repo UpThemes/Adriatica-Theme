@@ -1,0 +1,168 @@
+.postwrapper {
+  border-bottom: 5px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.featured-image {
+  overflow: hidden;
+  width: auto;
+
+  img {
+    border: none;
+    padding: 0;
+    margin: 0;
+    float: none;
+    width: 100%;
+    height: auto;
+  } 
+}
+
+.meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  color: #666;
+  float: left;
+  width: 145px;
+  display: inline; 
+  font-size: .9em;
+
+  li{
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.has-featured-image{
+  
+  .meta{
+    margin-top: 20px;
+  }
+  
+}
+
+.format-video,
+.format-quote,
+.format-status {
+
+  h1.entry-title{
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+}
+
+.format-quote blockquote{
+  font-size: 1.4em;
+}
+
+.format-video,
+.format-quote,
+.format-status {
+  padding-bottom: 0;
+
+  .meta {
+    width: 100%;
+    margin-bottom: 15px;
+
+    li {
+      float: left;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    
+      a {
+        border: 0; 
+      } 
+    }
+  }
+
+  .grid_1 li {
+    width: 100%;
+  }
+  
+  .grid_2 li {
+    width: 50%;
+
+    &.comments {
+      text-align: right;
+      a {
+        float: right;
+        display: inline; 
+      } 
+    }
+  }
+
+  .grid_3 li {
+    width: 33%;
+  }
+
+  .grid_4 li {
+    width: 25%;
+  }
+
+  .grid_5 li {
+    width: 20%; 
+  } 
+}
+
+.post-content {
+  margin: 30px auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #222; 
+}
+
+.postwrapper .featured-image {
+  background-color: #eee;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+}
+
+h1.single-cat {
+  border-bottom: 4px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.postwrapper h1,
+.single h1.single-cat,
+h1.no-image,
+.content-wrapper{
+  margin-left: 180px;
+}
+
+.single h1.single-cat {
+  border-bottom-width: 0;
+  margin-bottom: 0; 
+}
+
+.has-featured-image h1 {
+  position: relative;
+  z-index: 5;
+  background-color: white;
+  display: block;
+  padding: 30px 0 10px 35px;
+  margin-top: -55px;
+  margin-right: -5px;
+  margin-left: 145px;
+  border-top-left-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  background: white;
+}
+
+h1 a:hover {
+  border-right: 0;
+  border-bottom: 0; 
+}
+
+.more-link {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}

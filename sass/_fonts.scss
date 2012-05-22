@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(http://fonts.googleapis.com/css?family=Enriqueta);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+
+body{
+  font: 16px/21px Enriqueta;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+#primary a, 
+.search-form label,
+input[type="text"],
+textarea {
+  font-family: Oxygen;
+}
+
+code{
+  font-family: "PT Mono";
+}
