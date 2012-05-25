@@ -10,6 +10,7 @@ Version: 1.6
 @import 'compass/css3';
 @import 'fonts';
 @import 'icons';
+@import 'pagination';
 @import 'base';
 @import 'layout';
 @import 'wordpress';
@@ -18,3 +19,7 @@ Version: 1.6
 @import 'header';
 @import 'footer';
 @import 'sidebar';
+
+/* Color Schemes */
+@import 'bluegray';
+@import 'light';

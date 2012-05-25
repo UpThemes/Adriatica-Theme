@@ -22,18 +22,16 @@ $up_options = upfw_get_options();
 	<div id="header">
 		<div class="inner">
 
-      <?php $el = is_front_page() ? "h1" : "div"; ?>
-
-      <<?php echo $el; ?> id="logo">
+      <div id="headimg">
 
         <?php if( get_header_image() ): ?>
   			<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>"><img src="<?php echo header_image(); ?>"/></a>
         <?php else: ?>
-          <?php bloginfo('name'); ?>
-          <span><?php bloginfo('description'); ?></span>
+          <h1 id="title"><a class="title" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+          <div id="desc"><?php bloginfo('description'); ?></div>
         <?php endif; ?>
 
-      </<?php echo $el; ?>>
+      </div>
 
 			<?php
 			if( function_exists('wp_nav_menu') ):

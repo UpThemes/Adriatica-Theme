@@ -6,12 +6,40 @@
   margin: 0 0 20px 0;
   padding: 70px 0 25px 0;
 
-  #logo {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 0;
-    bottom: -5px; 
+  #headimg {
+    float: left;
+    color: white;
+    
+    img{
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    #title{
+      color: white;
+      font-size: 1.9em;
+      margin: 0 0 7px;
+      
+      a{
+        @include transition(100ms all linear);
+      }
+      a:hover{
+        text-decoration: none;
+        opacity: 0.6;
+        -moz-opacity: 0.6;
+        -webkit-opacity: 0.6;
+        -khtml-opacity: 0.6;
+        -o-opacity: 0.6;
+        filter: alpha(opacity=60);
+      }
+    }
+    
+    #desc{
+      display: block;
+      color: #777;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
   }
 
   .search-form {
@@ -71,7 +99,7 @@
     text-indent: -9000px;
     display: block;
     background: url("images/btn_search_submit.png") no-repeat center center;
-    top: 6px;
+    top: 9px;
     right: 8px;
     opacity: 0.5;
     -moz-opacity: 0.5;
@@ -130,6 +158,10 @@ nav.menu{
 	font-size: .94em;
 	text-decoration: none;
 	line-height: 2em;
+	
+	&.has-menu{
+	  background: url("images/arrow-down.png") center bottom;
+	}
 }
 
 #primary li { /* all list items */

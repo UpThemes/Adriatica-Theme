@@ -1,0 +1,27 @@
+.paging{
+  padding-top: 20px;
+  text-align: center;
+
+  .page-numbers{
+    padding: 6px 8px !important;
+    height: auto;
+    line-height: 1em;
+    font-size: 16px;
+  }
+  .next{
+    float: right;
+  }
+  .prev{
+    float: left;
+  }
+  .next,
+  .prev{
+    background: #eee;
+    @include border-radius(4px);
+    @include transition(200ms opacity linear);
+    &:hover{
+      text-decoration: none;
+      @include opacity(.8);
+    } 
+  }
+}

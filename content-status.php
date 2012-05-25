@@ -1,13 +1,13 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class("clearfix postwrapper"); ?>>
 
+  <?php if( get_the_title() ): ?>
   <h1 class="entry-title">
-    <?php if( !is_singular() ) echo '<a href="' . get_permalink() . '" title="' . __('Permanent Link to','adriatica') . get_the_title() .'">'; ?>
     <?php the_title(); ?>
-    <?php if( !is_singular() ) echo '</a>'; ?>
   </h1>
+  <?php endif; ?>
 
-  <?php the_content(); ?>
+  <?php if( get_the_content() ) the_content(); ?>
 
-  <?php the_ap_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
+  <?php adriatica_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
 
 </div><!-- /.postwrapper -->

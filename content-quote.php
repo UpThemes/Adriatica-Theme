@@ -8,6 +8,6 @@
 
   <?php the_content(); ?>
 
-  <?php the_ap_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
+  <?php adriatica_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
 
 </div><!-- /.postwrapper -->

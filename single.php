@@ -16,7 +16,7 @@
 				
 				<?php else : ?>
 				
-					<?php no_posts(); ?>
+					<?php adriatica_no_posts(); ?>
 				
 				<?php endif; ?>
 

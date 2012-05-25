@@ -15,10 +15,6 @@
   background: #eee;
 }
 
-h3#comments-title {
-  margin-left: 185px;
-}
-
 .commentlist {
   margin-bottom: 20px;
   margin: 0;
@@ -34,15 +30,14 @@ h3#comments-title {
   } 
 }
 
+#comments{
+  margin-left: 180px;
+}
+
 #comments, 
 .commentlist, 
 #respond {
   margin-bottom: 20px; 
-}
-
-.commentlist, 
-#respond {
-  margin-left: 185px; 
 }
 
 .commentlist {

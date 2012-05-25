@@ -8,13 +8,13 @@
 
 			<?php if( have_posts() ): while( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'content', get_post_format() ); ?>
+      <?php get_template_part( 'content', 'page' ); ?>
 
       <?php comments_template(); ?>
 
       <?php endwhile; else : ?>
 
-      <?php no_posts(); ?>
+      <?php adriatica_no_posts(); ?>
 
       <?php endif; ?>
 

@@ -45,6 +45,7 @@
 }
 
 .format-video,
+.format-link,
 .format-quote,
 .format-status {
 
@@ -59,7 +60,16 @@
   font-size: 1.4em;
 }
 
+.format-link p a{
+  font-size: 1.6em;
+
+  &:after{
+    content:" →";
+  }
+}
+
 .format-video,
+.format-link,
 .format-quote,
 .format-status {
   padding-bottom: 0;

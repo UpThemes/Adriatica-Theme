@@ -13,7 +13,7 @@ else
   <div class="featured-image"><?php the_post_thumbnail('featured-image') ?></div>
   <?php endif; ?>
 
-	<?php the_ap_meta(); ?>
+	<?php adriatica_meta(); ?>
   
 	<h1 class="entry-title">
 	  <?php if( !is_singular() ) echo '<a href="' . get_permalink() . '" title="' . __('Permanent Link to','adriatica') . get_the_title() .'">'; ?>
