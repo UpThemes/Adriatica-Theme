@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 
-	$('.postwrapper').fitVids();
+	$('.hentry').fitVids();
+	
+	$('ul > li').find('ul').parent('li').addClass('has-sub');
 	
 });

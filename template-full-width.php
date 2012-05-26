@@ -8,7 +8,7 @@ Template Name: Full Width Page
 
   <div id="main">
   
-    <div id="maincontent" class="fullwidth">
+    <div id="content" class="fullwidth">
     
       <div class="inner">
       
@@ -36,7 +36,7 @@ Template Name: Full Width Page
 
       </div><!-- /#inner -->
       
-    </div><!-- /#maincontent -->
+    </div><!-- /#content -->
     
   </div><!-- /#main -->
   

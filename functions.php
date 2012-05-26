@@ -1,6 +1,7 @@
 <?php
-require_once('admin/admin.php');         // UpThemes Framework
-require_once('theme-options.php');   // Theme options
+require_once('options/options.php');     // UpThemes Framework
+require_once('inc/theme-options.php');   // Theme options
+require_once('inc/custom-header.php');   // Custom header
 
 function adriatica_theme_setup() {
 
@@ -24,37 +25,16 @@ function adriatica_theme_setup() {
 	add_theme_support( 'post-formats', array( 'video', 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 
 	// Add support for custom backgrounds
-	add_custom_background();
+	if ( function_exists( 'wp_get_theme' ) ) {
+	  add_theme_support('custom-background');
+	} else {
+  	add_custom_background();
+  }
 
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size('featured-image',880,380,true);
-
-	// The default header text color
-	define( 'HEADER_TEXTCOLOR', 'FFF' );
-
-	// The height and width of your custom header.
-	// Add a filter to adriatica_header_image_width and adriatica_header_image_height to change these values.
-	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'adriatica_header_image_width', 260 ) );
-	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'adriatica_header_image_height', 80 ) );
-
-	// We'll be using post thumbnails for custom header images on posts and pages.
-	// We want them to be the size of the header image that we just defined
-	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
-	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
-
-	// Add logo image size
-	add_image_size( 'logo', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
-
-	// Turn on random header image rotation by default.
-	add_theme_support( 'custom-header' );
-
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See adriatica_admin_header_style(), below.
-	add_custom_image_header( 'adriatica_header_style', 'adriatica_admin_header_style', 'adriatica_admin_header_image' );
-
-	// ... and thus ends the changeable header business.
 
 }
 
@@ -97,115 +77,6 @@ function adriatica_widgets_init(){
 }
 
 add_action('widgets_init','adriatica_widgets_init');
-
-if ( ! function_exists( 'adriatica_header_style' ) ) :
-/**
- * Styles the header image and text displayed on the blog
- *
- * @since Adriatica 1.0
- */
-function adriatica_header_style() {
-
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == get_header_textcolor() )
-		return;
-	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' != get_header_textcolor() ) :
-	?>
-	
-		#title a,
-		#desc {
-			color: #<?php echo get_header_textcolor(); ?> !important;
-		}
-	<?php endif; ?>
-	</style>
-	<?php
-}
-endif; // adriatica_header_style
-
-if ( ! function_exists( 'adriatica_admin_header_style' ) ) :
-/**
- * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * Referenced via add_custom_image_header() in adriatica_theme_init().
- *
- * @since Aperturious 1.0
- */
-function adriatica_admin_header_style() {
-?>
-	<style type="text/css">
-	.appearance_page_custom-header #headimg {
-		border: none;
-	}
-	#headimg{
-	  background: #222;
-	  padding: 15px 0 25px;
-	}
-  #headimg h1{
-    display: block;
-    color: white;
-    font-size: 18px;
-    margin-bottom: 4px;
-    padding: 0 15px;
-  }
-  #headimg h1 a{
-    text-decoration: none;
-  }
-  #headimg #desc{
-    display: block;
-    color: #777;
-    font-size: 13px;
-    margin-bottom: 0;
-    text-decoration: none;
-    padding: 0 15px;
-  }
-	<?php
-		// If the user has set a custom color for the text use that
-		if ( get_header_textcolor() != HEADER_TEXTCOLOR ) :
-	?>
-		#headimg h1 a,
-		#desc {
-			color: #<?php echo get_header_textcolor(); ?>;
-		}
-	<?php endif; ?>
-	#headimg img {
-		height: auto;
-	}
-	</style>
-<?php
-}
-endif; // adriatica_admin_header_style
-
-if ( ! function_exists( 'adriatica_admin_header_image' ) ) :
-/**
- * Custom header image markup displayed on the Appearance > Header admin panel.
- *
- * Referenced via add_custom_image_header() in adriatica_setup().
- *
- * @since Adriatica 1.0
- */
-function adriatica_admin_header_image() { ?>
-	<div id="headimg">
-		<?php
-		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) )
-			$style = ' style="display:none;"';
-		else
-			$style = ' style="color:#' . get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) . ';"';
-		?>
-		<h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
-		<?php endif; ?>
-	</div>
-<?php }
-endif; // adriatica_admin_header_image
 
 /**
  * Sets the post excerpt length to 40 words.
@@ -309,7 +180,7 @@ function theme_footer() {
 	
 }
 
-function adriatica_navigation( $type = 'plain', $endsize = 1, $midsize = 1 ) {
+function adriatica_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 
   echo '  <div class="paging clearfix">'."\n";
   if( function_exists('wp_pagenavi') ) : ?>
@@ -370,7 +241,7 @@ if($tags)		  $metacount++;
 	
 			<ul class="meta grid_<?php echo $metacount; ?>">
 				<?php if($author) {?><li class="author"><i class="icon-user"></i> <?php the_author_link(); ?></li><?php } ?>
-				<?php if($date) {?><li class="date"><i class="icon-calendar"></i><a href="<?php the_permalink(); ?>"><?php the_time('M j, Y'); ?></a></li><?php } ?>
+				<?php if($date) {?><li class="date"><i class="icon-calendar"></i> <a href="<?php the_permalink(); ?>"><?php the_time('M j, Y'); ?></a></li><?php } ?>
 				<?php if($category) {?><li class="category"><i class="icon-book-open"></i> <?php the_category(', '); ?></li><?php } ?>
 				<?php if($comments) {?><li class="comments"><i class="icon-comment"></i> <?php comments_popup_link(__('0 comments','adriatica'), __('1 comment','adriatica'), __('% comments')); ?></li><?php } ?>
 				<?php if($tags) {?><?php if (function_exists('the_tags')) { echo ' '; the_tags('<li class="tags"><i class="icon-tag"></i> ', ', ', '</li>'); } ?><?php } ?>

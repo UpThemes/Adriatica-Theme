@@ -8,7 +8,7 @@ Template Name: Archives Page
 
   <div id="main">
   
-    <div id="maincontent">
+    <div id="content">
     
       <div class="inner">
       		
@@ -71,7 +71,7 @@ Template Name: Archives Page
 		
       </div><!-- /#inner -->
       
-    </div><!-- /#maincontent -->
+    </div><!-- /#content -->
       
 	  <?php get_sidebar() ?>
 

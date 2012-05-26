@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" <?php post_class("clearfix postwrapper"); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
 
   <?php if( get_the_title() ): ?>
   <h1 class="entry-title">
@@ -10,4 +10,4 @@
 
   <?php adriatica_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
 
-</div><!-- /.postwrapper -->
+</div><!-- /.hentry -->

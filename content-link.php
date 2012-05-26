@@ -1,5 +1,5 @@
 <?php
-$post_class = "clearfix postwrapper";
+$post_class = "";
 
 if( has_post_thumbnail() )
   $post_class .= " has-featured-image";
@@ -13,4 +13,4 @@ else
 
   <?php adriatica_meta($author=true,$date=true,$category=false,$comments=true,$tags=false); ?>
     
- 	</div><!-- /.postwrapper -->
+ 	</div><!-- /.hentry -->

@@ -2,11 +2,11 @@
   
   <div id="main">
   
-    <div id="maincontent">
+    <div id="content">
     
       <div class="inner">
 
-        <h1 class="single-cat"><?php _e('Page Not Found','adriatica'); ?></h1>
+        <h1><?php _e('Page Not Found','adriatica'); ?></h1>
         
         <p><?php _e('The page you requested may have been moved or deleted.','adriatica'); ?></p>
         
@@ -14,7 +14,7 @@
 
       </div><!-- /.inner -->
     
-    </div><!-- /#maincontent -->
+    </div><!-- /#content -->
       
 	  <?php get_sidebar(); ?>
 

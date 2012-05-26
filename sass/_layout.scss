@@ -47,7 +47,7 @@ body{
   clear: both;
 }
 
-#maincontent {
+#content {
   display: inline;
   float: left;
   width: 75%;
@@ -57,7 +57,7 @@ body{
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.16);
+  @include box-shadow(0 2px 2px rgba(0,0,0,.16));
   min-height: 450px;
 
   .inner {
@@ -65,4 +65,34 @@ body{
     padding: 40px;
     line-height: 1.5em; 
   }
+}
+
+.layout_reversed{
+
+  #content{
+    float: right;
+  }
+
+  #sidebar{
+    float: left;
+    
+    .widget{    
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+}
+
+.layout_single_column{
+
+  #content{
+    width: 100%;
+    margin: 0;
+  }
+
+  #sidebar{
+    display: none;
+  }
+
 }

@@ -1,4 +1,4 @@
-body, #maincontent, #container {
+body, #content, #container {
   width: 100%;
   margin: 0;
   float: none;
@@ -40,5 +40,5 @@ a:link, a:visited {
   font-weight: bold;
   text-decoration: underline; }
 
-#maincontent a:link:after, #maincontent a:visited:after {
+#content a:link:after, #content a:visited:after {
   content: " (" attr(href) ") "; }

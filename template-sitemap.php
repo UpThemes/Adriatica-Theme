@@ -8,11 +8,11 @@ Template Name: Sitemap Page
 
   <div id="main">
   
-    <div id="maincontent">
+    <div id="content">
     
       <div class="inner">
       
-			<div class="postwrapper">
+			<div <?php post_class(); ?>>
 				
 				<h1 class="page-title entry-title"><?php _e('Sitemap','adriatica'); ?></h1>
 				
@@ -35,13 +35,11 @@ Template Name: Sitemap Page
 					<ul><?php wp_list_categories('depth=0&title_li=&show_count=1'); ?></ul>
 				</div>
 				
-				<div class="clear"></div>
-
-			</div><!-- /.postwrapper -->
+			</div><!-- /.hentry -->
 
       </div><!-- /#inner -->
       
-    </div><!-- /#maincontent -->
+    </div><!-- /#content -->
       
 	  <?php get_sidebar() ?>
 

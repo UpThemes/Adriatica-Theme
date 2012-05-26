@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" <?php post_class("clearfix postwrapper has-video"); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class("clearfix"); ?>>
 
 	<h1 class="entry-title">
 	  <?php if( !is_singular() ) echo '<a href="' . get_permalink() . '" title="' . __('Permanent Link to','adriatica') . get_the_title() .'">'; ?>
@@ -11,4 +11,4 @@
 
   <?php adriatica_meta($author=false,$date=true,$category=false,$comments=true,$tags=false); ?>
 
-</div><!-- /.postwrapper -->
+</div><!-- /.hentry -->

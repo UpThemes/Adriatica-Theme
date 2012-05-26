@@ -3,7 +3,7 @@
   text-align: center;
 
   .page-numbers{
-    padding: 6px 8px !important;
+    padding: 6px 2px;
     height: auto;
     line-height: 1em;
     font-size: 16px;
@@ -16,6 +16,8 @@
   }
   .next,
   .prev{
+    padding-right: 8px;
+    padding-left: 8px;
     background: #eee;
     @include border-radius(4px);
     @include transition(200ms opacity linear);

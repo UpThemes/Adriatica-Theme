@@ -1,5 +1,5 @@
 <?php
-$post_class = "clearfix postwrapper";
+$post_class = "clearfix";
 
 if( has_post_thumbnail() )
   $post_class .= " has-featured-image";
@@ -10,7 +10,7 @@ else
 <div id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
 
   <?php if( has_post_thumbnail() ): ?>
-  <div class="featured-image"><?php the_post_thumbnail('featured-image') ?></div>
+  <div class="featured-image"><?php the_post_thumbnail("featured-image") ?></div>
   <?php endif; ?>
 
 	<?php adriatica_meta(); ?>
@@ -25,4 +25,4 @@ else
 	<?php the_content(); ?>
   </div>
     
- 	</div><!-- /.postwrapper -->
+ 	</div><!-- /.hentry -->

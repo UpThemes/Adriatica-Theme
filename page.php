@@ -2,7 +2,7 @@
 
   <div id="main">
 
-  	<div id="maincontent">
+  	<div id="content">
 
       <div class="inner">
 
@@ -20,7 +20,7 @@
 
       </div><!-- /.inner -->
 
-    </div><!-- /#maincontent -->
+    </div><!-- /#content -->
 
     <?php get_sidebar() ?>
 
