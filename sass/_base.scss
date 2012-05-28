@@ -9,44 +9,40 @@ p {
 
 a {
   text-decoration: none;
+
   &:hover, &:active {
     text-decoration: underline; 
   }
+
   &:hover img {
     border-color: #ccc; 
   }
+
   img {
     border: 0; 
-  } 
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1em;
-  font-weight: bold;
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
   margin: 0 0 1em 0; 
 }
 
-h1 {
-  font-size: 1.6em;
-}
-
-h2 {
-  font-size: 1.4em;
-}
-
-h3 {
-  font-size: 1.2em;
-}
-
-h4, h5, h6 {
-  font-size: 1em;
-}
 
 h6{
   margin-bottom: 0;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
   color: #444; 
 }
 
@@ -59,7 +55,6 @@ blockquote {
   border-left: 5px solid #f2f2f2;
   padding-left: 30px;
   margin: 1.5em 1em 1.5em 0;
-  font: italic 1em/1.4em Georgia, "Times New Roman", Times, serif;
   p {
     color: #111; 
   } 
@@ -92,12 +87,6 @@ dd {
   margin: 0; 
 }
 
-code {
-  line-height: 1.2em;
-  font-size: 0.9em;
-  font-weight: normal; 
-}
-
 input[type="text"], 
 input[type="email"], 
 input[type="phone"], 
@@ -108,7 +97,8 @@ textarea{
 }
 
 input {
-  &[type="submit"], &.submit {
+  &[type="submit"],
+  &.submit {
     cursor: pointer;
     background: #333;
     color: white;
@@ -118,7 +108,8 @@ input {
     padding-left: 8px;
     padding-right: 8px; 
   }
-  &[type="submit"]:active, &.submit:active {
+  &[type="submit"]:active,
+  &.submit:active {
     background: #000;
     color: #333;
     border: 1px inset #333; 

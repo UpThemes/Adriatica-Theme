@@ -183,11 +183,6 @@ function theme_footer() {
 function adriatica_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 
   echo '  <div class="paging clearfix">'."\n";
-  if( function_exists('wp_pagenavi') ) : ?>
-
-    <?php wp_pagenavi(); ?>
-
-  <?php else :
 
     global $wp_query, $wp_rewrite;  
     $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
@@ -219,12 +214,16 @@ function adriatica_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 
     echo paginate_links( $pagination );
 
-
-  endif;
-
   echo '  </div>'."\n";
 }
 
+/**
+ * Prints the custom CSS from the theme options panel
+ *
+ * @uses upfw_get_options()
+ *
+ * @package adriatica
+ */
 function adriatica_meta($author=true,$date=true,$category=true,$comments=true,$tags=true){
 	
 global $post,$up_options;
@@ -233,35 +232,50 @@ $metacount = 0;
 
 if($author)		$metacount++;
 if($date)		  $metacount++;
-if($category)	$metacount++;
-if($comments)	$metacount++;
 if($tags)		  $metacount++;
-
-	if( is_home() || is_front_page() || is_archive() || is_search() ): ?>
-	
-			<ul class="meta grid_<?php echo $metacount; ?>">
-				<?php if($author) {?><li class="author"><i class="icon-user"></i> <?php the_author_link(); ?></li><?php } ?>
-				<?php if($date) {?><li class="date"><i class="icon-calendar"></i> <a href="<?php the_permalink(); ?>"><?php the_time('M j, Y'); ?></a></li><?php } ?>
-				<?php if($category) {?><li class="category"><i class="icon-book-open"></i> <?php the_category(', '); ?></li><?php } ?>
-				<?php if($comments) {?><li class="comments"><i class="icon-comment"></i> <?php comments_popup_link(__('0 comments','adriatica'), __('1 comment','adriatica'), __('% comments')); ?></li><?php } ?>
-				<?php if($tags) {?><?php if (function_exists('the_tags')) { echo ' '; the_tags('<li class="tags"><i class="icon-tag"></i> ', ', ', '</li>'); } ?><?php } ?>
-			</ul>
-  
-<?php
-	endif;
+if($category)	{
+  if( get_the_category() )
+    $metacount++;
+  else
+    $category = false;
+}
+if($comments){
+  if( comments_open() )
+    $metacount++;
+  else
+    $comments = false;
+}
 
 	if( is_singular() ): ?>
-      <ul class="meta grid_<?php echo $metacount; ?>">
+
+      <ul class="clearfix meta grid_<?php echo $metacount; ?>">
         <?php if($author) {?><li class="author"><i class="icon-user"></i> <?php the_author_link(); ?></li><?php } ?>
         <?php if($date) {?><li class="date"><i class="icon-calendar"></i> <a href="<?php the_permalink(); ?>"><?php the_time('M j, Y'); ?></a></li><?php } ?>
-        <?php if($category) {?><li class="category"><i class="icon-book-open"></i> <?php the_category(', '); ?></li><?php } ?>
+        <?php if($category) {?><li class="category"><i class="icon-book-open"></i> <span class="cats"><?php the_category(', '); ?></span></li><?php } ?>
         <?php if($comments) {?><li class="comments"><i class="icon-comment"></i> <?php comments_popup_link(__('0 comments','adriatica'), __('1 comment','adriatica'), __('% comments')); ?></li><?php } ?>
         <?php if($tags) {?><?php if (function_exists('the_tags')) { echo ' '; the_tags('<li class="tags"><i class="icon-tag"></i> ', ', ', '</li>'); } ?><?php } ?>
+      </ul>
+
+<?php else: ?>
+
+      <ul class="clearfix meta grid_<?php echo $metacount; ?>">
+      	<?php if($author) {?><li class="author"><i class="icon-user"></i> <?php the_author_link(); ?></li><?php } ?>
+      	<?php if($date) {?><li class="date"><i class="icon-calendar"></i> <a href="<?php the_permalink(); ?>"><?php the_time('M j, Y'); ?></a></li><?php } ?>
+      	<?php if($category) {?><li class="category"><i class="icon-book-open"></i> <span class="cats"><?php the_category(', '); ?></span></li><?php } ?>
+      	<?php if($comments) {?><li class="comments"><i class="icon-comment"></i> <?php comments_popup_link(__('0 comments','adriatica'), __('1 comment','adriatica'), __('% comments')); ?></li><?php } ?>
+      	<?php if($tags) {?><?php if (function_exists('the_tags')) { echo ' '; the_tags('<li class="tags"><i class="icon-tag"></i> ', ', ', '</li>'); } ?><?php } ?>
       </ul>
 <?php
   endif;
 }
 
+/**
+ * Prints the custom CSS from the theme options panel
+ *
+ * @uses upfw_get_options()
+ *
+ * @package adriatica
+ */
 function adriatica_custom_css(){
   $up_options = upfw_get_options();
   
@@ -286,11 +300,14 @@ function adriatica_custom_css(){
 
 add_action('wp_print_styles', 'adriatica_custom_css');
 
-function adriatica_no_posts(){
-	
-	global $wp_query, $post;
-
-?>
+/**
+ * Print a message when no posts exist for a certain query
+ *
+ * @uses get_template_part()
+ *
+ * @package adriatica
+ */
+function adriatica_no_posts(){ ?>
 	
   <h1><?php _e('Not Found','adriatica'); ?></h1>
   <p><?php _e('Sorry, but you are looking for something that isn\'t here.','adriatica'); ?></p>

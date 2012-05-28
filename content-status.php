@@ -2,7 +2,7 @@
 
   <?php if( get_the_title() ): ?>
   <h1 class="entry-title">
-    <?php the_title(); ?>
+    <?php _e("Status Update","adriatica"); ?>
   </h1>
   <?php endif; ?>
 

@@ -34,15 +34,20 @@ body.colors_light{
   	color: black;
   }
   
-  #header .search-form label{
-  	color: #ccc;
+  #header .search-form{
+
+    .s{
+      color: #222;
+      background-color: white;
+      @include box-shadow(0 -1px 0 #999);
+    }
+    
+    .submit-image{
+      background-image: url("images/colors/light/btn_search_submit.png");
+    }
+
   }
-  
-  #header .search-form .s{
-  	color: #555;
-  	background-color: white;
-  	@include box-shadow(0 -1px 0 #999);
-  }
+
   
   #sidebar h2,
   #sidebar h3,

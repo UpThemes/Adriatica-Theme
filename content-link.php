@@ -1,5 +1,5 @@
 <?php
-$post_class = "";
+$post_class = "clearfix";
 
 if( has_post_thumbnail() )
   $post_class .= " has-featured-image";

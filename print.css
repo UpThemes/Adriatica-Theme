@@ -4,7 +4,7 @@ body, #content, #container {
   float: none;
   background: white url(none); }
 
-#header .column, .ad, .noprint {
+#header, .ad, .noprint, #footer, form {
   display: none; }
 
 body {

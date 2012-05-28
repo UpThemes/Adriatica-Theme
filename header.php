@@ -19,41 +19,43 @@ $up_options = upfw_get_options();
 <body <?php body_class(); ?>>
 
 <div id="wrapper">
+
 	<div id="header">
-		<div class="inner">
-
+	
+	  <div class="inner">
+  
       <div id="headimg">
-
+  
         <?php if( get_header_image() ): ?>
   			<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>"><img src="<?php echo header_image(); ?>"/></a>
         <?php else: ?>
           <h1 id="title"><a class="title" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
           <div id="desc"><?php bloginfo('description'); ?></div>
         <?php endif; ?>
+  
+      </div><!--/#headimg-->
+  
+  		<div class="search-form">
+  			<?php get_template_part("searchform"); ?>
+  		</div><!-- /.search-form -->
+  
+      <?php
+      if( function_exists('wp_nav_menu') ):
+      	wp_nav_menu(array(
+      		'menu' => 'Main Menu',
+      		'theme_location' => 'main_menu',
+      		'container' => "nav",
+      		'container_class' => "menu",
+      		'menu_id' => 'primary',
+      		'menu_class' => 'sf-menu',
+      		'fallback_cb' => 'wp_page_nav'
+      	));
+      else:
+        wp_page_nav();
+      endif;
+      ?>
 
-      </div>
+    </div><!--/.inner-->
 
-			<?php
-			if( function_exists('wp_nav_menu') ):
-				wp_nav_menu(array(
-					'menu' => 'Main Menu',
-					'theme_location' => 'main_menu',
-					'container' => "nav",
-					'container_class' => "menu",
-					'menu_id' => 'primary',
-					'menu_class' => 'sf-menu',
-					'fallback_cb' => 'wp_page_nav'
-				));
-			else:
-			  wp_page_nav();
-			endif;
-			?>
-
-		<div class="search-form">
-			<?php get_template_part("searchform"); ?>
-		</div><!-- /.inner -->
-
-		</div>
-	</div>
-
-  <div id="container">
+	</div><!--#header-->
+  <div id="container" class="clearfix">

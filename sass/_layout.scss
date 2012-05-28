@@ -9,61 +9,39 @@ body{
 
 #wrapper {
   background: url("images/black-background-holes.jpg") repeat-x top left;
+  text-align: center;
 }
 
 #container,
-#header > .inner,
-#footer > .inner{
+#header .inner,
+#footer .inner{
   width: $theme-width;
   max-width: $theme-max-width;
   min-width: $theme-min-width;
 }
 
-#header .inner{
+#header .inner,
+#container{
   margin: 0 auto;
   text-align: left;
-  position: relative;
-  padding: 5px 0;
-  min-height: 65px; 
-}
-
-#container {
-  margin: 0 auto;
-  text-align: left;
-  margin-bottom: 40px;
 }
 
 #sidebar{
   width: 25%;
   float: right;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-#main {
-  margin: 0;
-  padding: 0 0 30px 0;
-  clear: both;
 }
 
 #content {
-  display: inline;
   float: left;
   width: 75%;
   margin-bottom: 40px;
-  overflow: hidden;
   background-color: #fff;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  @include border-radius(4px);
   @include box-shadow(0 2px 2px rgba(0,0,0,.16));
-  min-height: 450px;
 
   .inner {
     position: relative;
     padding: 40px;
-    line-height: 1.5em; 
   }
 }
 

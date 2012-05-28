@@ -22,7 +22,7 @@
         
         <?php endif; ?>
         
-        <?php adriatica_navigation(); ?>
+        <?php adriatica_pagination(); ?>
         
       </div><!-- /#inner -->
       

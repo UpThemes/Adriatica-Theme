@@ -29,7 +29,7 @@
  * @uses adriatica_admin_header_style()
  * @uses adriatica_admin_header_image()
  *
- * @package _s
+ * @package adriatica
  */
 function adriatica_custom_header_setup() {
 	$args = array(
@@ -68,7 +68,7 @@ add_action( 'after_setup_theme', 'adriatica_custom_header_setup' );
  *
  * @return stdClass All properties represent attributes of the curent header image.
  *
- * @package _s
+ * @package adriatica
  * @since _s 1.1
  */
 
