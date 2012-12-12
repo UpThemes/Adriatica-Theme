@@ -224,4 +224,46 @@ nav.menu{
 	left: auto;
 	}
 
+  li ul li.has-sub {
+    position:relative;
+    
+    ul {
+      display:none;
+      position:absolute;
+      right:100%;
+      top:0;
+      background: white;
+      padding: 10px;
+      margin-left: -4.05em;
+      @include border-radius(5px);
+      text-align: left;
+      font-weight: normal;
+      width: 10em;
+      @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
+
+      &:after {
+        content: "";
+        border-left: 5px solid #fff;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 5px;
+        right:-5px;
+      }
+
+      &:before {
+        content: "";
+        border-left: 5px solid #aaa;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 6px;
+        right:-5px;
+      }
+    }
+
+    &:hover > ul {
+      display:block;
+    }
+  }
 }
