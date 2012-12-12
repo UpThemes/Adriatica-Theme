@@ -746,10 +746,11 @@ h1 a:hover {
     text-align: left;
     float: left;
     color: white;
-    margin-top: 50px; }
+    margin-top: 20px; }
     #header #headimg img {
       margin-bottom: 20px;
-      display: block; }
+      display: block;
+      max-height: 113px; }
     #header #headimg #title {
       font-size: 1.9em;
       margin: 0 0 7px; }

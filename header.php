@@ -54,7 +54,7 @@ $up_options = upfw_get_options();
         wp_page_nav();
       endif;
       ?>
-
+      <div class="clear"></div>
     </div><!--/.inner-->
 
 	</div><!--#header-->
