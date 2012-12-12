@@ -635,6 +635,12 @@ h1 a:hover {
   margin-top: 10px;
   font-weight: bold; }
 
+.alignleft {
+  margin-right: 15px; }
+
+.alignright {
+  margin-left: 15px; }
+
 /* Comment Styles */
 .logged-in-as,
 .form-allowed-tags {
