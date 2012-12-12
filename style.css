@@ -681,7 +681,7 @@ h1 a:hover {
     width: 100%; }
 .commentlist li {
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   -moz-border-radius: 4px;
   border: 1px solid #94afc7;
   background-color: #e3edf6;
@@ -690,15 +690,22 @@ h1 a:hover {
 .comment-author {
   position: absolute;
   left: -180px;
-  width: 180px;
+  width: 160px;
   padding-top: 10px;
   top: 0;
+  padding-right: 20px;
   background: url("images/comment_arrow.png") no-repeat right 40px; }
 
 .comment-author img {
   display: block;
   padding: 2px;
   border: 1px solid #ccc; }
+
+.comment-meta {
+  font-size: 12px; }
+
+.comment-content {
+  min-height: 75px; }
 
 .commentlist .children {
   margin: 10px 0 0 0;
