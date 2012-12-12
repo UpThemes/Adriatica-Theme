@@ -1015,6 +1015,8 @@ nav.menu {
       margin: 0;
       padding: 0;
       border: 0; }
+    #sidebar .widget img {
+      max-width: 100%; }
   #sidebar .outer {
     width: auto;
     position: relative;
