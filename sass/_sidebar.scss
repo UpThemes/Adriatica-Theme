@@ -15,9 +15,13 @@
       margin: 0;
       padding: 0;
       
-      li{
+      .widget li{
         margin: 0;
-        padding: 0;
+        padding:10px 0;
+
+        + li {
+          border-top:1px solid #ddd;
+        }
       }
     }
   

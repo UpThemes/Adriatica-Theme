@@ -995,9 +995,11 @@ nav.menu {
   #sidebar ul {
     margin: 0;
     padding: 0; }
-    #sidebar ul li {
+    #sidebar ul .widget li {
       margin: 0;
-      padding: 0; }
+      padding: 10px 0; }
+      #sidebar ul .widget li + li {
+        border-top: 1px solid #ddd; }
   #sidebar .widget {
     background-color: white;
     border-radius: 4px;
