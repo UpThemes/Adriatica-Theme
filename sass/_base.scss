@@ -147,6 +147,9 @@ address {
 ol,ul{
   list-style: square;
   margin-bottom: 1em;
+  ol,ul {
+    margin-bottom:0;
+  }
 }
 
 ol li,
