@@ -33,6 +33,10 @@
       padding: 20px;
       @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
       overflow:hidden;
+
+      .sub-menu {
+        display:none;
+      }
       
       h4.widgettitle{
         text-shadow: none;
