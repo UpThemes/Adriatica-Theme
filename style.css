@@ -661,6 +661,14 @@ h1 a:hover {
   .post table th, .post table td {
     border: 1px solid #ddd;
     padding: 10px; }
+.post dl {
+  margin-bottom: 10px; }
+.post dt {
+  font-weight: bold;
+  margin-bottom: 5px; }
+.post dd {
+  margin-bottom: 10px;
+  padding-left: 10px; }
 
 /* Comment Styles */
 .logged-in-as,
