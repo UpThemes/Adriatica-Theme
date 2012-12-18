@@ -312,6 +312,10 @@ ul li {
   list-style: square;
   margin-left: 1.2em; }
 
+ol,
+ol > li {
+  list-style: decimal; }
+
 .assistive-text {
   display: none; }
 
