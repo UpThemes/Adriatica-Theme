@@ -126,6 +126,26 @@
   } 
 }
 
+.comment-navigation {
+  overflow:hidden;
+  
+  .nav-previous,
+  .nav-next {
+    a {
+      padding:10px 0;
+      display:block;
+    }
+  }
+
+  .nav-previous {
+    float:left;
+  }
+
+  .nav-next {
+    float:right;
+  }
+}
+
 #commentform {
   
   input[type="text"],

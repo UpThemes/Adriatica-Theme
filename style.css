@@ -737,6 +737,17 @@ h1 a:hover {
   color: #346596;
   font-style: italic; }
 
+.comment-navigation {
+  overflow: hidden; }
+  .comment-navigation .nav-previous a,
+  .comment-navigation .nav-next a {
+    padding: 10px 0;
+    display: block; }
+  .comment-navigation .nav-previous {
+    float: left; }
+  .comment-navigation .nav-next {
+    float: right; }
+
 #commentform input[type="text"],
 #commentform textarea {
   display: block;
