@@ -205,3 +205,19 @@ h1 a:hover {
 .alignright {
   margin-left:15px;
 }
+
+.post {
+  table {
+    margin-bottom:10px;
+    
+    th {
+      font-weight:bold;
+      background:#f4f4f4;
+    }
+
+    th,td {
+      border:1px solid #ddd;
+      padding:10px;
+    }
+  }
+}

@@ -653,6 +653,15 @@ h1 a:hover {
 .alignright {
   margin-left: 15px; }
 
+.post table {
+  margin-bottom: 10px; }
+  .post table th {
+    font-weight: bold;
+    background: #f4f4f4; }
+  .post table th, .post table td {
+    border: 1px solid #ddd;
+    padding: 10px; }
+
 /* Comment Styles */
 .logged-in-as,
 .form-allowed-tags {
